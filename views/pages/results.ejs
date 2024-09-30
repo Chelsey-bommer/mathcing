@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <title>Resultaten</title>
+    <link rel="stylesheet" href="css/superstyle.css">
+</head>
+
+
+<body id="results">
+    <figure>
+        <img src="../../static/img/<%- houses.foto %>" alt="Picture of a house">
+    </figure>
+
+    <section method="/resultaten" class="main2">
+        <article>
+            <h2>Jouw perfecte match!</h2>
+            <ul>
+                <li> Straat: <%- houses.naam %>
+                </li>
+                <li> Stad: <%- houses.stad %>
+                </li>
+                <li> Prijs: € <%- houses.prijs %>
+                </li>
+            </ul>
+            <%- include('../partials/house-profile'); %>
+        </article>
+
+        <!-- Hier komen de opgehaalde resultaten-->
+        <article>
+            <div>
+                <h4>Niet de perfecte match? Probeer het opnieuw:</h4>
+                <p>
+                    Je hebt gezocht naar huizen in <span><%= stad %></span> met een budget vanaf <span>€ <%= budget %></span>
+                </p>
+            </div>
+            <a href="update" class="link-button secondary">Pas voorkeuren aan</a>
+        </article>
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+        <title>Update</title>
+</head>
+
+
+<body id="update">
+    <figure>
+        <img src="https://images.unsplash.com/photo-1488707872600-5507977fe355?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+           load="lazy" alt="">
+    </figure>
+    <section>
+        <div>
+            <h2>Bestaande voorkeuren:</h2>
+            <p>
+                <%- include('../partials/current-house-profile'); %>
+            </p>
+        </div>
+
+        <form name="data" id="form" action='/resultaten' method="post">
+            <div>
+                <label for="stad">Stad</label>
+                <select name="stad" id="huizen1">
+                </select>
+            </div>
+
+            <div>
+                <label for="budget">Budget</label>
+                <output></output>
+            </div>
+            <input id="slider" name="budget" class="slider" value="" type="range" min="150000" max="850000" step="50000"
+                oninput="this.nextElementSibling.value = this.value">
+            <input id="submit" type="submit" value="Update voorkeuren">
+        </form>
+    </section>
+
+    <!-- Link javascript -->
+    <script src="/static/js/slider.min.js"></script>
+    <script src="/static/js/script.min.js"></script>
+
+</body>
+
+</html>
